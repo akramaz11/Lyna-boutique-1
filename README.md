@@ -3,89 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>lyna boutique</title>
+  <title>Lyna Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #4f46e5;
+      --light: #f1f5f9;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--primary);
     }
+
     header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    .products {
+      background: white;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .product {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      width: 200px;
+
+    header img {
+      height: 80px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
       text-align: center;
-      padding: 15px;
+      padding: 4rem 1rem;
+      background: linear-gradient(120deg, #4f46e5, #3b82f6);
+      color: white;
     }
-    .product img {
-      width: 100%;
-      height: auto;
+
+    .hero h2 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
     }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .socials {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .socials a {
+      color: var(--primary);
+      font-size: 2rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
     footer {
-      background: #222;
-      color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
     }
-    .social-icons img {
-      width: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
+
+    @media (max-width: 600px) {
+      nav a {
+        margin: 0 0.5rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>lyna boutique</h1>
+    <a href="#home">
+      <img src="logo.png" alt="Store Logo">
+    </a>
     <nav>
       <a href="#home">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="shop" class="products">
-    <div class="product"
-    </div>
-  
+  <section class="hero" id="home">
+    <h2>Welcome</h2>
+    <p>Discover quality products crafted with care.</p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@lyna.boutique4@gmail.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+    <p>Address: Bouzareah, Alger, Air de France</p>
+  </section>
+
+  <section class="socials">
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+  </section>
 
   <footer>
-    <p>Connect with us on social media:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/lyna._.boutique?igsh=YW5wdXZmazV3YXNr" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/share/1AXnmTwNjM/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.tiktok.com/@lyna.boutique4?_t=ZM-8wnWiSDke6I&amp;_r=1" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" alt="TikTok">
-      </a>
-    </div>
-    <p>&copy; Lyna boutique</p>
+    <p>&copy; Lyna Boutique. All rights reserved.</p>
   </footer>
 
 </body>
